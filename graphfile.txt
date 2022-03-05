@@ -1,0 +1,15 @@
+digraph G{
+   first [shape=record,label="  list tail\n 0x55e237415480 | list head\n 0x55e2374154c0 | list size\n 4" ];
+   List0x55e237415480  [shape = record, label = "<a0x55e237415480> address\n 0x55e237415480 | value  5 | <f0x55e237415480> next | <ff0x55e237415480> prev"];
+   List0x55e2374154a0  [shape = record, label = "<a0x55e2374154a0> address\n 0x55e2374154a0 | value 15 | <f0x55e2374154a0> next | <ff0x55e2374154a0> prev"];
+   List0x55e237415500  [shape = record, label = "<a0x55e237415500> address\n 0x55e237415500 | value 23 | <f0x55e237415500> next | <ff0x55e237415500> prev"];
+   List0x55e2374154c0  [shape = record, label = "<a0x55e2374154c0> address\n 0x55e2374154c0 | value 17 | <f0x55e2374154c0> next | <ff0x55e2374154c0> prev"];
+   edge[color="darkgreen",fontcolor="blue",fontsize=12];
+   List0x55e237415480:  <f0x55e237415480>  -> List0x55e2374154a0: <a0x55e2374154a0>;
+   List0x55e2374154a0:  <f0x55e2374154a0>  -> List0x55e237415500: <a0x55e237415500>;
+   List0x55e237415500:  <f0x55e237415500>  -> List0x55e2374154c0: <a0x55e2374154c0>;
+   edge[color="darkblue",fontcolor="blue",fontsize=12];
+   List0x55e2374154c0:  <ff0x55e2374154c0>  -> List0x55e237415500: <a0x55e237415500>;
+   List0x55e237415500:  <ff0x55e237415500>  -> List0x55e2374154a0: <a0x55e2374154a0>;
+   List0x55e2374154a0:  <ff0x55e2374154a0>  -> List0x55e237415480: <a0x55e237415480>;
+}
